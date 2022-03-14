@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation - Case_01</title>
+    <style>
+        body>section{
+            position: absolute;
+            background-color: blue;
+            border-radius: 10%;
+            width: 200px;
+            height: 100px;
+            animation-name: assignment07;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes assignment07 {
+            0%{
+                top: 0;
+                left: 0;
+                background-color: blue;
+                transform: rotate(0deg);
+            }
+            25%{
+                top: 0;
+                left: 1320px;
+                background-color: yellow;
+                transform: rotate(180deg);
+            }
+            50%{
+                top: 600px;
+                left: 1320px;
+                background-color: red;
+                transform: rotate(360deg);
+            }
+            75%{
+                top: 600px;
+                left: 0;
+                background-color: deeppink;
+                transform: rotate(180deg);
+            }
+            100%{
+                top: 0;
+                left: 0;
+                background-color: orangered;
+                transform: rotate(360deg);
+            }
+        }
+        }
+    </style>
+
+</head>
+<body>
+<section></section>
+</body>
+</html>
