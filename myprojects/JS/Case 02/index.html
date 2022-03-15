@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KITT theme light system</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <style>
+        section {
+            height: 10vh;
+            width: 75vw;
+            display: flex;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border: 1px solid black;
+        }
+
+        section > div {
+            width: 15vw;
+            border: 1px solid black;
+        }
+
+
+        body > div {
+            width: 100vw;
+            height: 5vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: 35vh;
+        }
+
+    </style>
+</head>
+<body>
+
+<section>
+    <div style="background-color: #800000"></div>
+    <div style="background-color: #b61515"></div>
+    <div style="background-color: #fc6060"></div>
+    <div style="background-color: #f6c3c3"></div>
+    <div style="background-color: #ffffff"></div>
+</section>
+
+<div>
+    <button id="btnStart" class="btn btn-primary">Start</button>
+    <button id="btnStop" class="btn btn-danger">Stop</button>
+</div>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="jQuery/jquery-3.6.0.min.js"></script>
+<script>
+
+    function animateColors() {
+        let colour1 = $("section>div:nth-child(1)").css('background-color');
+        let colour2 = $("section>div:nth-child(2)").css('background-color');
+        let colour3 = $("section>div:nth-child(3)").css('background-color');
+        let colour4 = $("section>div:nth-child(4)").css('background-color');
+        let colour5 = $("section>div:nth-child(5)").css('background-color');
+
+        $("section>div:nth-child(1)").css('background-color',colour2);
+        $("section>div:nth-child(2)").css('background-color',colour3);
+        $("section>div:nth-child(3)").css('background-color',colour4);
+        $("section>div:nth-child(4)").css('background-color',colour5);
+        $("section>div:nth-child(5)").css('background-color',colour1);
+
+    }
+
+    /*var colours = new Array();
+    function animateColors(){
+        for (var i = 1;i<6;i++){
+            colours[i] = $("section>div:nth-child(i)").css('background-color');
+        }
+        $("section>div:nth-child(1)").css('background-color',colours[2]);
+        $("section>div:nth-child(2)").css('background-color',colours[3]);
+        $("section>div:nth-child(3)").css('background-color',colours[4]);
+        $("section>div:nth-child(4)").css('background-color',colours[5]);
+        $("section>div:nth-child(5)").css('background-color',colours[1]);
+    }*/
+
+    let timerId
+    $("#btnStart").click(function () {
+        clearInterval(timerId);
+        timerId =   setInterval(animateColors,100);
+    });
+
+
+    $("#btnStop").click(function () {
+        clearInterval(timerId);
+    });
+</script>
+</body>
+</html>

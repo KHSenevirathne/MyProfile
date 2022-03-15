@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Java Script Queue</title>
+    <style>
+        body {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #34495e;
+        }
+
+        body > div {
+            width: 1200px;
+            height: 350px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        #firstDiv {
+            width: 175px;
+            height: 100px;
+            background-color: lightpink;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #outerDiv{
+            width: 1200px;
+            height: 136px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        #outerDiv>hr:nth-child(3){
+            position: absolute;
+            bottom: 0;
+            width: inherit;
+        }
+
+        .largeDiv {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 750px;
+            height: 100px;
+        }
+
+        .largeDiv > div {
+            width: 175px;
+        }
+
+        #secondDiv {
+            background-color: #bb5bc9;
+        }
+
+        #thirdDiv {
+            background-color: red;
+        }
+
+        #fourthDiv {
+            background-color: green;
+        }
+
+        #fifthDiv {
+            background-color: blue;
+        }
+
+        #sixthDiv {
+            background-color: yellow;
+            width: 175px;
+            height: 100px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div id="firstDiv"></div>
+    <div id="outerDiv">
+        <hr>
+        <div class="largeDiv">
+            <div id="secondDiv"></div>
+            <div id="thirdDiv"></div>
+            <div id="fourthDiv"></div>
+            <div id="fifthDiv"></div>
+        </div>
+        <hr>
+    </div>
+    <div id="sixthDiv"></div>
+</div>
+<script src="jQuery/jquery-3.6.0.min.js"></script>
+<script>
+    var i = 0;
+
+    function colourChange() {
+        setTimeout(function () {
+            if (i == 0) {
+                $("#firstDiv").css('background-color', 'lightpink');
+                $("#secondDiv").css('background-color', '#bb5bc9');
+                $("#thirdDiv").css('background-color', 'red');
+                $("#fourthDiv").css('background-color', 'green');
+                $("#fifthDiv").css('background-color', 'blue');
+                $("#sixthDiv").css('background-color', 'yellow');
+                console.log("0");
+            }
+            if (i == 1) {
+                $("#firstDiv").css('background-color', 'yellow');
+                $("#secondDiv").css('background-color', 'lightpink');
+                $("#thirdDiv").css('background-color', '#bb5bc9');
+                $("#fourthDiv").css('background-color', 'red');
+                $("#fifthDiv").css('background-color', 'green');
+                $("#sixthDiv").css('background-color', 'blue');
+                console.log("1");
+            }
+            if (i == 2) {
+                $("#firstDiv").css('background-color', 'blue');
+                $("#secondDiv").css('background-color', 'yellow');
+                $("#thirdDiv").css('background-color', 'lightpink');
+                $("#fourthDiv").css('background-color', '#bb5bc9');
+                $("#fifthDiv").css('background-color', 'red');
+                $("#sixthDiv").css('background-color', 'green');
+                console.log("2");
+            }
+            if (i == 3) {
+                $("#firstDiv").css('background-color', 'green');
+                $("#secondDiv").css('background-color', 'blue');
+                $("#thirdDiv").css('background-color', 'yellow');
+                $("#fourthDiv").css('background-color', 'lightpink');
+                $("#fifthDiv").css('background-color', '#bb5bc9');
+                $("#sixthDiv").css('background-color', 'red');
+                console.log("3");
+            }
+            if (i == 4) {
+                $("#firstDiv").css('background-color', 'red');
+                $("#secondDiv").css('background-color', 'green');
+                $("#thirdDiv").css('background-color', 'blue');
+                $("#fourthDiv").css('background-color', 'yellow');
+                $("#fifthDiv").css('background-color', 'lightpink');
+                $("#sixthDiv").css('background-color', '#bb5bc9');
+                console.log("4");
+            }
+            if (i == 5) {
+                $("#firstDiv").css('background-color', '#bb5bc9');
+                $("#secondDiv").css('background-color', 'red');
+                $("#thirdDiv").css('background-color', 'green');
+                $("#fourthDiv").css('background-color', 'blue');
+                $("#fifthDiv").css('background-color', 'yellow');
+                $("#sixthDiv").css('background-color', 'lightpink');
+                console.log("5");
+            }
+            i++;
+            if (i < 6) {
+                colourChange();
+            }else{
+                i=0;
+                colourChange();
+            }
+        }, 750);
+    }
+
+    colourChange();
+
+
+
+</script>
+</body>
+</html>
