@@ -1,4 +1,4 @@
-Hey Im Kaveesh,
+##Hey Im Kaveesh,
 
 website : https://khsenevirathne.000webhostapp.com/
 
@@ -10,6 +10,6 @@ github page : https://khsenevirathne.github.io/MyProfile/
 
 ![git Front](assets/images/Front.JPG)
 
-## Who am I ?
+# Who am I ?
 
 ![about me](assets/images/aboutme.JPG)
